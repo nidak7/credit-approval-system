@@ -19,7 +19,7 @@ The entire application is **Dockerized**, making it easy to run without manual e
 ---
 
 ## Project Structure
-```text
+```
 credit_approval_system/
 │
 ├── customers/
