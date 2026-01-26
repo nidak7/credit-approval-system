@@ -3,7 +3,7 @@ from customers.models import Customer
 
 class Loan(models.Model):
     loan_id = models.AutoField(primary_key=True)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name="loans")
     loan_amount = models.FloatField()
     interest_rate = models.FloatField()
     tenure = models.IntegerField()

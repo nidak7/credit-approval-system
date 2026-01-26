@@ -46,8 +46,9 @@ class CheckEligibilityAPIView(APIView):
             approval = False
 
         total_existing_emi = sum(
-            loan.monthly_installment for loan in customer.loans.all()
+            loan.emi for loan in customer.loans.filter(approved=True)
         )
+
 
         if total_existing_emi > 0.5 * customer.monthly_salary:
             approval = False
