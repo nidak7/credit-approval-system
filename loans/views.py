@@ -45,7 +45,6 @@ class CheckEligibilityAPIView(APIView):
         else:
             approval = False
 
-        # EMI burden rule
         total_existing_emi = sum(
             loan.monthly_installment for loan in customer.loans.all()
         )

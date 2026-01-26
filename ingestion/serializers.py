@@ -1,16 +1,15 @@
-# ingestion/serializers.py
 from rest_framework import serializers
-from customers.models import Customer  # Use the Customer model from customers app
+from customers.models import Customer
 
 class CustomerRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
         fields = [
-            'customer_id',    # primary key in your model
+            'customer_id',
             'first_name',
             'last_name',
             'age',
-            'monthly_salary',  # must match model field
+            'monthly_salary',
             'phone_number',
             'approved_limit'
         ]

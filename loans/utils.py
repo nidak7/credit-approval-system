@@ -4,9 +4,8 @@ from loans.models import Loan
 
 
 def calculate_credit_score(customer):
-    score = 600  # base score for registered customer
+    score = 600
 
-    # Income-based scoring (USE monthly_salary)
     if customer.monthly_salary >= 50000:
         score += 150
     elif customer.monthly_salary >= 30000:
@@ -14,7 +13,6 @@ def calculate_credit_score(customer):
     else:
         score += 50
 
-    # Age-based stability
     if customer.age >= 25:
         score += 50
 
