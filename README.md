@@ -46,6 +46,7 @@ credit_approval_system/
 ├── customer_data.xlsx
 ├── loan_data.xlsx
 ├── Dockerfile
+├── .gitignore
 ├── .dockerignore
 ├── requirements.txt
 ├── manage.py
